@@ -5,3 +5,4 @@
 ## ScreenShots: 
 1. Toggle-Hide buttons :![Toggle button screenshot](./src/HideShowButton/hide.png);
 2. Counter-Buttons With TailWindCss : ![Counter button tailWindCss screenshot](./src/Counter/counter.png);
+3. Auto-Write : ![Auto Write screenshot](./src/autoWrite/autoWrite.png);

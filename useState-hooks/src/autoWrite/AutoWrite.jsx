@@ -52,7 +52,7 @@ function TypingEffect() {
 
   return (
     <div>
-      <h1>{currentText.slice(0, charIndex)}</h1>
+      <h1 className='text-2xl text-white font-extrabold uppercase'>{currentText.slice(0, charIndex)}</h1>
     </div>
   );
 }
