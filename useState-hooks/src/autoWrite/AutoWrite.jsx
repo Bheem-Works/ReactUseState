@@ -1,34 +1,60 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 
-const careers = ['I am a developer','I am a website designer','I am a ui/ux desinger','I am a freelaincer'];
+// 👇 List of messages to show one-by-one
+const careers = ['I am a developer', 'I am a designer', 'I am a freelancer'];
 
-function AutoWrite() {
-    const [careerIndex,setCareerIndex] = useState(0);
-    const [characterIndex,setCharacterIndex] = useState(0);
+function TypingEffect() {
+  const [careerIndex, setCareerIndex] = useState(0);      // 🧠 Which text are we on
+  const [charIndex, setCharIndex] = useState(0);          // ✍️ How many letters to show
 
-    useEffect(()=>{
-        const currentCareer = careers[careerIndex];    
-        const timeOut = setTimeout(()=>{
-            setCharacterIndex((prev => prev + 1));
-        },200);
+  useEffect(() => {
+    const currentText = careers[careerIndex];
 
-        if(characterIndex === currentCareer.length) {
-            setTimeout(() => {
-                setCharacterIndex(0);
-                setCareerIndex((prev) => (prev + 1) % careers.length)
-            }, 1000);
-        }
+    console.log("▶ useEffect runs");
+    console.log("   currentText:", currentText);
+    console.log("   careerIndex:", careerIndex);
+    console.log("   charIndex:", charIndex);
 
-        return () => clearTimeout(timeOut);
-    },[careerIndex,characterIndex])
+    // ⏱ Typing next character every 200ms
+    const timeout = setTimeout(() => {
+      setCharIndex((prev) => {
+        console.log("   → Typing next letter, charIndex becomes:", prev + 1);
+        return prev + 1;
+      });
+    }, 200);
 
-    const currentCareer = careers[careerIndex];
+    // ✅ When full word is typed
+    if (charIndex === currentText.length) {
+      console.log("✅ Finished typing:", currentText);
+
+      setTimeout(() => {
+        console.log("⏳ Switching to next text after 1s...");
+
+        // reset character index
+        setCharIndex(0);
+        // go to next text using looping logic
+        setCareerIndex((prev) => {
+          const nextIndex = (prev + 1) % careers.length;
+          console.log("   🔁 Moving to next careerIndex:", nextIndex);
+          return nextIndex;
+        });
+      }, 1000);
+    }
+
+    // 🧹 Clean-up: clear timeout before next run
+    return () => {
+      console.log("🧹 Clearing timeout");
+      clearTimeout(timeout);
+    };
+  }, [charIndex, careerIndex]);
+
+  const currentText = careers[careerIndex];
 
   return (
     <div>
-    <h1 className='text-white text-2xl text-shadow-black font-extrabold uppercase'>{currentCareer.slice(0,characterIndex)}</h1>  
+      <h1>{currentText.slice(0, charIndex)}</h1>
     </div>
-  )
+  );
 }
 
-export default AutoWrite
+export default TypingEffect;
