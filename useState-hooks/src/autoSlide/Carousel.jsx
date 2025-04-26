@@ -20,7 +20,7 @@ const next = () => {
         className="flex transition-transform ease-out duration-500" 
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
-        {children} <h1>this is</h1>
+        {children}
       </div>
       <p>Current Slide: {curr}</p>
 

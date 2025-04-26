@@ -1,11 +1,9 @@
 import React from 'react'
-// import Write from './autoWrite/Write'
-// import Text from './autoWrite/Text'
-import AutoSlide from './autoSlide/AutoSlide'
+ import Carousel from './Carousel/Carousel'
 function App() {
   return (
     <div>
-      <AutoSlide />
+      <Carousel />
     </div>
   )
 }
