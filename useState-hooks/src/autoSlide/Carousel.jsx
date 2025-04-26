@@ -6,10 +6,12 @@ function Carousel({ children }) {
   
   const prev = () => {
     setCurr((curr) => (curr === 0 ? children.length - 1 : curr - 1));
-  }
-  
-  const next = () => {
+    console("minush")
+}
+
+const next = () => {
     setCurr((curr) => (curr === children.length - 1 ? 0 : curr + 1));
+    console.log("adding")
   }
   
   return (
@@ -18,9 +20,10 @@ function Carousel({ children }) {
         className="flex transition-transform ease-out duration-500" 
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
-        {children}
+        {children} <h1>this is</h1>
       </div>
-      
+      <p>Current Slide: {curr}</p>
+
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <button className='p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white' onClick={prev}>
           <ChevronLeft size={40} />
