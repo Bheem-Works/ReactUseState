@@ -1,9 +1,9 @@
 import React from 'react'
- import Carousel from './Carousel/Carousel'
+import Toggle from './TogglingUi/Toggle'
 function App() {
   return (
     <div>
-      <Carousel />
+      <Toggle />
     </div>
   )
 }
