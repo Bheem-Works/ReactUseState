@@ -1,9 +1,9 @@
 import React from 'react'
-import Toggle from './TogglingUi/Toggle'
+import StateCounter from './stateCounter'
 function App() {
   return (
     <div>
-      <Toggle />
+      <StateCounter />
     </div>
   )
 }
