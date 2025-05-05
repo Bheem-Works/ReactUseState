@@ -1,11 +1,9 @@
 import React from 'react'
-import StateCounter from './stateCounter'
 function App() {
   return (
     <div>
-      <StateCounter />
+      <button className='bg-red-500'>button</button>
     </div>
   )
 }
-
 export default App
