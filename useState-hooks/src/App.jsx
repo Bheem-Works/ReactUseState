@@ -1,9 +1,9 @@
 import React from 'react'
-import ToggleBtn from './Beginner/ToggleBtn'
+import Color from './Beginner/Color'
 function App() {
   return (
     <div>
-      <ToggleBtn />
+      <Color />
     </div>
   )
 }
