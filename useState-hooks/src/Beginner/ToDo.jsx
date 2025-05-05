@@ -1,30 +1,28 @@
 import React, { useState } from 'react'
 
 function ToDo() {
-    const [add,setAdd] = useState(["vim"]);
-    const [newState,setNewState] = useState("");
-    const addToTask = (e) =>{
-        setNewState(e.target.value)
-    }
-
-    const addTask = () => {
-        if(newState.trim()!=="") {
-            setAdd([...add,newState]);
-            setNewState("");
+    const[task,setTask] = useState(['vim is here']);
+    const[newTask,setNewTask]= useState("");
+    const inputHandleChange = (e) => setNewTask(e.target.value);
+    const addToTask = () => {
+        if(newTask.trim()!=="") {
+            setTask([...task,newTask]);
+            setNewTask("");
         }
     }
+
   return (
     <div>
-    <input type="text" onChange={addToTask} value={newState} />  
-    <button onClick={addTask}>AddTask</button>
-    <ul>
-        {add.map((todo,index)=>(
-            <li key={index}>{todo}</li>
+      <input type="text" onChange={inputHandleChange} value={newTask} />
+      <button onClick={addToTask}>Add-Task</button>
+      <ul>
+        {task.map((task,index)=>(
+
+            <li key={index}>{task}</li>
         ))}
-    </ul>
+      </ul>
     </div>
   )
 }
 
 export default ToDo
-    
