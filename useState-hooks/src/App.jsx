@@ -1,9 +1,9 @@
 import React from 'react'
-import ToDo from './Beginner/ToDo'
+import CharacterCounter from './Intermeted/CharacterCounter'
 function App() {
   return (
     <div>
-      <ToDo />
+      <CharacterCounter />
     </div>
   )
 }
