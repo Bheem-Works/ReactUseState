@@ -1,9 +1,9 @@
 import React from 'react'
-import MisoCarouselGallery from './Intermeted/misoCarousel/MisoCarouselGallery'
+import DynamicDropdown from './Intermeted/DynmaicDropDown/DynamicDropdown'
 function App() {
   return (
     <div>
-      <MisoCarouselGallery />
+      <DynamicDropdown />
     </div>
   )
 }
