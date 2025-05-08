@@ -1,10 +1,11 @@
 import React from 'react'
-import CharacterCounter from './Intermeted/CharacterCounter'
+import MisoCarouselGallery from './Intermeted/misoCarousel/MisoCarouselGallery'
 function App() {
   return (
     <div>
-      <CharacterCounter />
+      <MisoCarouselGallery />
     </div>
   )
 }
+
 export default App
