@@ -12,7 +12,7 @@ function FormError() {
         
         function submit (e) {
             e.preventDefault();
-            if(email === 'admin' && password === '1234') {
+            if(email.endsWith('@gmail.com') && password === '1234') {
                 setSucess('Sucess');
             } else {
                 setSucess('Fail');
@@ -22,6 +22,7 @@ function FormError() {
   return (
     <div>
         <form onSubmit={submit} className='flex justify-center items-center h-[100vh] flex-col gap-2 '>
+        <h1 className='text-3xl text-blue-500 font-extrabold uppercase tracking-widest underline'>Login Page </h1>
             <input className='
             bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"             '
              type="text" placeholder='Enter your email' onChange={emailOnChange}/>
