@@ -1,9 +1,9 @@
 import React from 'react'
-import DynamicDropdown from './Intermeted/DynmaicDropDown/DynamicDropdown'
+import FormError from './Intermeted/Form/FormError'
 function App() {
   return (
     <div>
-      <DynamicDropdown />
+      <FormError />
     </div>
   )
 }
