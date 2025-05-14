@@ -1,9 +1,9 @@
 import React from 'react'
-import RealTimeChat from './Advance/RealTimeChat'
+import ControlInput from './Advance/ControlInput'
 function App() {
   return (
     <div>
-      <RealTimeChat />
+      <ControlInput />
     </div>
   )
 }
