@@ -1,10 +1,9 @@
 import React from 'react'
-import ControlInput from './Advance/ControlInput'
+import UserProfile from './Advance/UserProfile'
 function App() {
   return (
     <div>
-      <ControlInput  />
-      
+      <UserProfile />
     </div>
   )
 }
