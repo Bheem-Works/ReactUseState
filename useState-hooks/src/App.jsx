@@ -1,9 +1,12 @@
 import React from 'react'
-import ShoppingCard from './Advance/ShoppingCard'
+import MultiStep from './Advance/MultiStep'
+import UserProfile from './Advance/UserProfile'
+
 function App() {
   return (
     <div>
-      <ShoppingCard /> 
+      <UserProfile />
+      <MultiStep />
     </div>
   )
 }
