@@ -1,12 +1,10 @@
 import React from 'react'
-import MultiStep from './Advance/MultiStep'
-import UserProfile from './Advance/UserProfile'
+import Quiz from './Advance/quizApp/Quiz'
 
 function App() {
   return (
     <div>
-      <UserProfile />
-      <MultiStep />
+      <Quiz />
     </div>
   )
 }
